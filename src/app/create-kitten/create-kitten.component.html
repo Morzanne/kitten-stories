@@ -1,0 +1,48 @@
+<div>
+    <h2>Create your Kitten !</h2>
+    <form (ngSubmit)="myForm.valid" class="d-flex flex-column align-items-center mt-5 mb-5" #myForm="ngForm">
+        <div class="form-group">
+            <label for="name-order">Kitten's name</label>
+            <input [(ngModel)]="cat.name" id="name-order" class="form-control" name="name-order" type="text"
+                autocomplete="off" #kittenName="ngModel" required>
+        </div>
+        <div *ngIf="myForm.submitted">
+                <div *ngIf="kittenName.errors">
+                    <span *ngIf="kittenName.errors.required">Vous devez saisir quelque chose</span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="Race-order">Race</label>
+            <input [(ngModel)]="cat.race" id="Race-order" class="form-control" name="Race-order" type="text"
+                autocomplete="off" #kittenRace="ngModel" required>
+        </div>
+        <div *ngIf="myForm.submitted">
+                <div *ngIf="kittenRace.errors">
+                    <span *ngIf="kittenRace.errors.required">Vous devez saisir quelque chose</span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="date-order">Birthdate</label>
+            <input [(ngModel)]="cat.birthdate" type="date" id="date-order" class="form-control" name="date-order"
+                autocomplete="off" #kittenDate="ngModel" required>
+        </div>
+        <div *ngIf="myForm.submitted">
+                <div *ngIf="kittenDate.errors">
+                    <span *ngIf="kittenDate.errors.required">Vous devez saisir quelque chose</span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="photo-order">Photo</label>
+            <input [(ngModel)]="cat.photo" id="photo-order" class="form-control" name="photo-order" type="text"
+                autocomplete="off" #kittenPhoto="ngModel" required>
+        </div>
+        <div *ngIf="myForm.submitted">
+                <div *ngIf="kittenPhoto.errors">
+                    <span *ngIf="kittenPhoto.errors.required">Vous devez saisir quelque chose</span>
+                </div>
+        </div>
+
+        <button type="submit" (click)="createKitten()">Soumettre</button>
+
+    </form>
+</div>
