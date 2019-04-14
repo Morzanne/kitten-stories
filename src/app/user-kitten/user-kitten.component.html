@@ -1,9 +1,10 @@
 <h2>Your list :</h2>
 <div *ngFor="let adopt of adoptedList " class=" col-12 adopted d-flex flex-column align-items-center mt-5">
-  <p>{{adopt.name}}</p>
-  <p>{{adopt.race}}</p>
-  <p>{{adopt.birthdate}}</p>
-  <img class="img-fluid" src="{{adopt.photo}}" alt="blabla"/>
+  <div class="description">
+    <p>{{adopt.name}}</p>
+    <p>{{adopt.race}}</p>
+    <p>{{adopt.birthdate}}</p>
+  </div>
+  <img class="img-fluid" src="{{adopt.photo}}" alt="blabla" />
 
 </div>
-
