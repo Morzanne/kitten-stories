@@ -1,14 +1,12 @@
-<h1>Adopt A kitten !</h1>
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-6 ">
-           <div class="col-12"> <app-create-kitten></app-create-kitten></div>
-            <app-list-kitten></app-list-kitten>
-        </div>
-        <div class="col-12 col-lg-6">
-            <app-user-kitten></app-user-kitten>
-        </div>
+    <h1>Adopt A kitten !</h1>
+
+
+    <div class="listing d-flex justify-content-around mb-5">
+        <button><a routerLink="/creation">Créer son chaton</a></button>
+        <button><a routerLink="/globalelist">Vos listes !</a></button>
 
     </div>
+
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

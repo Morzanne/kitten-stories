@@ -1,12 +1,20 @@
-<div>
-  <h2>Kitten's global list:</h2>
-  <div *ngFor="let chat of catList" class=" thelist d-flex flex-column align-items-center mt-5 mb-5">
-    <div class="description">
-      <p>{{chat.name}}</p>
-      <p>{{chat.race}}</p>
-      <p>{{chat.birthdate}}</p>
+<div class="container">
+  <div class='row no-gutters d-flex justify-content-around'>
+    <div>
+      <h2>Kitten's global list:</h2>
+      <div *ngFor="let chat of catList" class=" thelist d-flex flex-column m-4 align-items-center justify-content-center">
+        <img class="img-fluid" src="{{chat.photo}}" />
+        <div class="description">
+          <p>{{chat.name}}</p>
+          <p>{{chat.race}}</p>
+          <p>{{chat.birthdate}}</p>
+        </div>
+        <button class=" col-8 mt-2"type="submit" (click)="adopt(chat.name, chat.race, chat.birthdate, chat.photo)">ADOPTEZ MOI</button>
+      </div>
     </div>
-    <img class="img-fluid" src="{{chat.photo}}" />
-    <button type="submit" (click)="adopt(chat.name, chat.race, chat.birthdate, chat.photo)">ADOPTEZ MOI</button>
+    <div>
+      <app-user-kitten></app-user-kitten>
+    </div>
   </div>
+
 </div>

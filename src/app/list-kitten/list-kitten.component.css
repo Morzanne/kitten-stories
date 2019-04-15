@@ -4,8 +4,10 @@
 }
 .description{
     display: none;
+    text-align: center
 }
 .thelist:hover .description{
     display: block;
+    text-align: center
     
 }

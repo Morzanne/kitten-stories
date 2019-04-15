@@ -8,5 +8,6 @@
 }
 .adopted:hover .description{
     display: block;
+    text-align: center;
     
 }

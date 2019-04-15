@@ -27,7 +27,12 @@ export class CreateKittenComponent implements OnInit {
 
   createKitten(){
 
-  catList.push({name:this.cat.name, race:this.cat.race,birthdate:this.cat.birthdate,photo:this.cat.photo});
+    if(this.cat.name && this.cat.race && this.cat.birthdate){
+
+      catList.push({name:this.cat.name, race:this.cat.race,birthdate:this.cat.birthdate,photo:this.cat.photo});
+    }
+
+  
     
     console.log(catList);
   }
